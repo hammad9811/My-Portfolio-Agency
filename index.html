@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+
+    <!-- Google Font (Poppins) Ka Online Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* MASTER BRAND COLORS CONTROL (CENTRAL SWITCH) */
+        :root {
+            --primary-green: #1e8449;
+            --premium-gold: #e67e22;
+            --bg-peela: #fef9e7;
+            --dark-charcoal: #2c3e50;
+        }
+
+        /* 1. Website ka Background aur Font Style */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: var(--bg-peela);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Uper wale Header ka Design */
+        header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 30px;
+        }
+
+        /* 3. Services List Ko Center aur Seedha Karna */
+        ul {
+            display: inline-block;
+            text-align: left;
+            font-size: 18px;
+            color: var(--dark-charcoal);
+        }
+
+        /* 4. Darmiyan Wale Box Ka Premium Design */
+        .container {
+            background-color: white;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            border: 4px solid var(--primary-green);
+            box-shadow: 0 4px 15px #cccccc;
+        }
+
+        /* 5. Input Boxes ka Design */
+        input[type="text"], input[type="email"] {
+            width: 80%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #cccccc;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 6. Send Message Button ka Design */
+        input[type="submit"] {
+            background-color: var(--premium-gold);
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* 7. Send Message Button Ka Hover Effect */
+        input[type="submit"]:hover {
+            background-color: var(--primary-green);
+        }
+
+        /* 8. Input Boxes Par Click (Focus) Karne Ka Effect */
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 10px rgba(30, 132, 73, 0.5);
+            outline: none;
+        }
+
+        /* 9. Footer Ka Premium Green Design */
+        footer {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        /* 10. Flexbox Se Boxes Ko Barabar Mein Lana */
+        .info-boxes {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .box-left, .box-right {
+            background-color: white;
+            width: 45%;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 4px 10px #cccccc;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 13. Boxes Par Mouse Le Jane Se Unka Bada Hona */
+        .box-left:hover, .box-right:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(30, 132, 73, 0.3);
+            cursor: pointer;
+        }
+
+        /* 11. Mobile Phone Ke Liye Layout & Font Responsiveness */
+        @media (max-width: 600px) {
+            .info-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box-left, .box-right {
+                width: 90%;
+                margin-bottom: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+
+        /* 12. Live Dot Design aur Blink Animation */
+        .live-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            margin-left: 10px;
+            animation: blinker 1.5s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECTION 1: UPER WALA HISSA (Sar) -->
+    <header>
+        <h1>Hafiz Hammad | Professional Web Developer</h1>
+        <p>Main AI Tools ki madad se modern aur fast websites banata hu.</p>
+    </header>
+
+    <!-- SECTION 2: DARMIYAN WALA HISSA (Mid) -->
+    <div class="container">
+        <h2>Humari Web Agency Ki Services:</h2>
+        <ul>
+            <li>Professional Web Designing</li>
+            <li>AI Tools Integration (Custom Chatbots)</li>
+            <li>Fast E-commerce Stores (Online Dukan)</li>
+            <li>Website Speed Optimization & Debugging</li>
+        </ul>
+        
+        <h3>Website Ka Order Dene Ke Liye Form Bharein: <span class="live-dot"></span> <span style="font-size: 14px; color: var(--primary-green); font-weight: bold;">Live Now</span></h3>
+        <form action="mailto:Hammadhafiz949@gmail.com" method="post" enctype="text/plain">
+            <input type="text" placeholder="Apna Name Likhein"><br><br>
+            <input type="email" placeholder="Apna Adress Likhein"><br><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+    <!-- 2 BOXES JO ACTIVE HYPERLINKS HAIN -->
+    <div class="info-boxes">
+        <!-- Phone Call active Box -->
+        <a href="tel:+923234233689" class="box-left" style="text-decoration: none; color: inherit;">
+            <h3>📞 Call Us</h3>
+            <p>+92 323 4233689</p>
+            <span style="font-size: 12px; color: var(--premium-gold); font-weight: bold;">Click to Call</span>
+        </a>
+        
+        <!-- Universal WhatsApp Link (Fixed Number) -->
+        <a href="https://wa.me" target="_blank" class="box-right" style="text-decoration: none; color: inherit;">
+            <h3>💬 WhatsApp Chat</h3>
+            <p>5:00 AM to 3:30 PM</p>
+            <span style="font-size: 12px; color: var(--primary-green); font-weight: bold;">Click to Chat</span>
+        </a>
+    </div>
+
+    <!-- SECTION 3: NEECHE WALA HISSA (Paon) -->
+    <footer>
+        <p>Created by Hafiz Hammad | 2026</p>
+    </footer>
+
+</body>
+</html>
